@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: rgb(217, 212, 212);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.text {
+    text-align: center;
+}
+p {
+    color: rgb(255, 255, 255);
+}
+.title {
+    margin-bottom: 5px;
+}
+.form {
+    margin-top:100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(69, 53, 242);
+    width:min-content;
+    border-radius: 10px;
+    padding: 30px;
+    width: 200px;
+    height: 350px;
+}
+.btn {
+    text-align: center;
+    width: 150px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.fieldContainer {
+    margin-top: 20px;
+}
+.container{
+    margin-right: 50px;
+}
+.fieldContainer1 {
+    margin-top: 20px;
+}
+
+.registration {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <p class="title">Регистрация</p>
+            <p class="text">Создайте учетную запись</p>
+            <form action="registration" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="fieldContainer">
+                        <p>{{ field.label_tag }}</p>
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <div class="registration">
+                    <input type="submit" value="Регистрация" class="btn">
+                </div>
+            </form>
+            <p class="text">Вернуться к странице входа</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form">
+            <p class="title">Вход</p>
+            <p class="text">Войдите в учетную запись<br>User1 12345678</p>
+            <form action="login" method="post">
+                {% csrf_token %}
+                {% for field in form1 %}
+                    <div class="fieldContainer1">
+                        <p>{{ field.label_tag }}</p>
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <div class="registration">
+                    <input type="submit" value="Войти" class="btn">
+                </div>
+            </form>
+            <p class="text">Ещё не зарегистрированы?</p>
+            <div class="registration">
+                <input type="submit" value="Регистрация" class="btn">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
